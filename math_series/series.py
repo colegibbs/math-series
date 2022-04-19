@@ -15,10 +15,9 @@ def lucas(n):
     return lucas(n - 1) + lucas(n - 2)
 
 def sum_series(n, nth_zero = 0, nth_one = 1):
-  if (nth_zero == 0 and nth_one == 1) or (nth_zero == 2 and nth_one == 1): 
-    if nth_zero == 0 and nth_one == 1:
-      return fibonacci(n)
-    else:
-      return lucas(n)
+  if n == 0:
+    return nth_zero
+  elif n == 1:
+    return nth_one
   else:
-    return "Only Fibonacci and Lucas series are suppored."
+    return sum_series((n - 1), nth_zero, nth_one) + sum_series((n - 2), nth_zero, nth_one)
