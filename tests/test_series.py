@@ -92,7 +92,3 @@ def test_sum_series_ten_two_one():
   expected = 123
   assert actual == expected
 
-def test_sum_series_five_five_one():
-  actual = sum_series(3, 5, 1)
-  expected = 12
-  assert actual == expected
